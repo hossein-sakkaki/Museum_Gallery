@@ -1,1 +1,2 @@
 // alert('hi')
+$('.carousel').carousel()
