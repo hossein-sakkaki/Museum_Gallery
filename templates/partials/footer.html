@@ -16,17 +16,17 @@
           <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">links</h5>
           <ul class="list-unstyled mb-0">
             <li class="mb-1">
-              <a href="#!" style="color: #4f4f4f;">Frequently Asked Questions</a>
+              <a href="{% url 'mainapp:index' %}" style="color: #4f4f4f;">Home</a>
             </li>
             <li class="mb-1">
-              <a href="#!" style="color: #4f4f4f;">Delivery</a>
+              <a href="#!" style="color: #4f4f4f;">About Us</a>
             </li>
             <li class="mb-1">
-              <a href="#!" style="color: #4f4f4f;">Pricing</a>
+              <a href="{% url 'gallery:photos' %}" style="color: #4f4f4f;">Gallery</a>
             </li>
-            <li>
+            {% comment %} <li>
               <a href="#!" style="color: #4f4f4f;">Where we deliver?</a>
-            </li>
+            </li> {% endcomment %}
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -46,9 +46,9 @@
         </div>
       </div>
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-3 bg-secondary">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://sakkaki.com/">sakkaki.com</a>
     </div>
     <!-- Copyright -->
   </footer>

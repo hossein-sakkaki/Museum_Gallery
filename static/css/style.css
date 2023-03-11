@@ -1,12 +1,15 @@
-body{
-    background-color: yellow;
+.container-inner{
+    border: 1px solid black;
 }
 
-/* header{
-    background-color: blueviolet;
-    color: red;
-} */
 
-.ss{
-    background-color: blue;
+.home-page{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
 }
