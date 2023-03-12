@@ -1,12 +1,35 @@
 {% extends 'maintemplate.html' %}
 
+{% block top_label %}
+
+{% endblock top_label %}
+
 {% block title %}
     Gallery
 {% endblock title %}
 
 {% block main %}
-<div class="home-page">
-    Gallery
-</div>
+    <div class="home-page">
+        Gallery
+    </div>
+    <br>
+    <div class="container">
+
+    {% for x in gallery %}
+        
+        {% if x.parent_code == NULL %}
+        <div class="picture-parent-box">
+            <img src="{{media_url}}{{x.image_name}}" alt="">
+            {{x.text_info}}
+            <button class="btn-dark shadow-none rounded">See more</button>
+        </div>
+        <hr>
+        {% endif %}
+       
+    {% endfor %}
+
+    </div>
+
+
     
 {% endblock main %}
