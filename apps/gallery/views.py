@@ -29,3 +29,7 @@ class GalleryIndex(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+    
+class Album(ListView):
+    model = Gallery
+    template_name = 'gallery/album.html'

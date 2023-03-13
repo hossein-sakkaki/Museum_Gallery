@@ -1,0 +1,26 @@
+{% extends 'maintemplate.html' %}
+
+{% block top_label %}
+
+{% endblock top_label %}
+
+{% block title %}
+    Album
+{% endblock title %}
+
+{% block main %}
+    <div class="home-page">
+        Album
+    </div>
+    <br>
+    <div class="container">
+
+    {% for x in gallery %}
+        {{x}}
+    {% endfor %}
+
+    </div>
+
+
+    
+{% endblock main %}
