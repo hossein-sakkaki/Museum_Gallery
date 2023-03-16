@@ -1,9 +1,9 @@
 from django.urls import path
 # from .gallery import views
-from .views import GalleryIndex, Album
+from .views import GalleryIndex, DetailAlbum
 
 app_name = 'gallery'
 urlpatterns = [
     path('',GalleryIndex.as_view(), name='photos'),
-    path('album/<int:pk>/',Album.as_view(), name='album'),
+    path('album/<int:pk>',DetailAlbum.as_view(), name='album'),
 ]

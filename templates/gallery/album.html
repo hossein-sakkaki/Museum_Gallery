@@ -14,10 +14,40 @@
     </div>
     <br>
     <div class="container">
+    
 
-    {% for x in gallery %}
-        {{x}}
-    {% endfor %}
+    {% comment %} {% for imageName in album_list %}
+    <div class="picture-child-box">
+        <img src="{{media_url}}photo/gallery/{{album.place_code}}/{{imageName}}" alt="{{imageName}}">
+        {{album.image_name}}
+        <hr>
+    </div>
+    {% endfor %} {% endcomment %}
+
+
+
+    {% comment %} {% for imageName in album_list %} {% endcomment %}
+        {% for x in info_photo %}
+            {% comment %} {% if  %}{% endif %} {% endcomment %}
+
+
+            <div class="picture-child-box">
+                <img src="{{media_url}}{{x.image_name}}" alt="{{imageName}}">
+                {{x.text_info}}
+            </div>
+        {% endfor %}
+
+        
+    {% comment %} {% endfor %} {% endcomment %}
+
+
+    
+    {% comment %} {% for imageName in album_list %}
+    <div class="picture-child-box">
+        <img src="{{media_url}}photo/gallery/{{album.place_code}}/{{imageName}}" alt="{{imageName}}">
+    </div>
+    {% endfor %} {% endcomment %}
+
 
     </div>
 

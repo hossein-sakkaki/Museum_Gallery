@@ -21,7 +21,9 @@
         <div class="picture-parent-box">
             <img src="{{media_url}}{{x.image_name}}" alt="">
             {{x.text_info}}
-            <button class="btn-dark shadow-none rounded">See more</button>
+            <a href="{% url 'gallery:album' x.id %}">
+                <button class="btn btn-dark shadow-none rounded">See more</button>
+            </a>
         </div>
         <hr>
         {% endif %}
