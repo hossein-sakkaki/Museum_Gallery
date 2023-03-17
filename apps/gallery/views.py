@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.views import View
 from .models import Gallery
 from django.conf import settings
 import os
@@ -16,10 +15,7 @@ class GalleryIndex(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
-    
-    
-    
-    
+        
 class DetailAlbum(DetailView):
     model = Gallery
     template_name = 'gallery/album.html'
@@ -31,20 +27,18 @@ class DetailAlbum(DetailView):
 
         try:
             gallery = Gallery.objects.get(id = pk)
-            gallery2 = Gallery.objects.filter(place_code = gallery.place_code)
+            filteredAlbum = Gallery.objects.filter(place_code = gallery.place_code)
 
             # path = settings.MEDIA_ROOT+ 'photo/gallery/' + str(gallery.place_code)
             # if os.path.isdir(path):
                 # album_list = os.listdir(path)
                 # context['album_list'] = album_list
-            context['info_photo'] = gallery2
+            context['info_photo'] = filteredAlbum
                 
 
             return context
         except gallery.DoesNotExist:
             raise Http404('Album dose not exist')
 
-        # except:
-        #     print(('Album dose not exist'))
         
     

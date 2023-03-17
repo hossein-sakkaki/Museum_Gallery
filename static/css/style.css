@@ -1,17 +1,16 @@
 .container-inner{
     border: 1px solid black;
 }
-
-
 .home-page{
     display: flex;
     justify-content: center;
-    margin: 40px 100px 0px 100px;
+    margin: 40px 100px 20px 100px;
     padding: 50px;
-    border: 1px solid black;
     border-radius: 5px;
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(96, 96, 96);
+    color: white;
 }
 .picture-parent-box{
     display: flex;
@@ -20,16 +19,26 @@
     margin: 10px;
     padding: 40px;
 }
-
+.text-info-box{
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+    max-height: 170px;
+    min-height: 170px;
+    overflow: scroll;
+    margin: 10px;
+    padding: 10px 30px 10px 15px;
+}
 .picture-parent-box img{
     width: 250px;
     box-shadow: 0px 0px 10px 3px;
 }
 
+
+
+
 .picture-child-box{
     display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
+    flex-direction: column;
     align-items: center;
     margin: 10px;
     padding: 40px;
@@ -37,4 +46,27 @@
 .picture-child-box img{
     width: 600px;
     box-shadow: 0px 0px 10px 3px;
+}
+.detail-text-info{
+    padding: 30px;
+    margin: 15px;
+}
+.date-of-shot{
+    display: flex;
+    flex-direction: column;
+}
+.back-button-place{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+
+
+.picture-parent-box h3{
+    font-weight: bold;
+}
+.picture-parent-box h3,
+.picture-parent-box h4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

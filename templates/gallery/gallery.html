@@ -12,26 +12,22 @@
     <div class="home-page">
         Gallery
     </div>
-    <br>
     <div class="container">
-
-    {% for x in gallery %}
-        
-        {% if x.parent_code == NULL %}
-        <div class="picture-parent-box">
-            <img src="{{media_url}}{{x.image_name}}" alt="">
-            {{x.text_info}}
-            <a href="{% url 'gallery:album' x.id %}">
-                <button class="btn btn-dark shadow-none rounded">See more</button>
-            </a>
-        </div>
-        <hr>
-        {% endif %}
-       
-    {% endfor %}
-
+        {% for x in gallery %}
+            {% if x.parent_code == NULL %}
+            <div class="picture-parent-box">
+                <img src="{{media_url}}{{x.image_name}}" alt="">
+                <div class="text-info-box">
+                    <h3>{{x.place_name}}</h3> 
+                    <h4>{{x.text_info}}</h4>
+                </div>
+                <a href="{% url 'gallery:album' x.id %}">
+                    <button class="btn btn-outline-success shadow-none rounded">See more</button>
+                </a>
+            </div>
+            <hr>
+            {% endif %}
+        {% endfor %}
     </div>
-
-
-    
 {% endblock main %}
+

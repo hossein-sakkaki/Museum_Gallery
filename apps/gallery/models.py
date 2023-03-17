@@ -1,6 +1,5 @@
 from django.db import models
 
-
 def upload_gallery_to_folder(instance, filename):
     return f"photo/gallery/{instance.place_code}/{filename}"
 
@@ -14,6 +13,7 @@ class Gallery(models.Model):
         ('6','6. Other picture'),
     ]
     place_code = models.CharField(max_length=15, choices=PLACE_NAME ,verbose_name="Place Code")
+    place_name = models.CharField(max_length=30, verbose_name='Place Name')
     shot_photo_date = models.DateField(auto_now_add=False)
     register_date = models.DateField(auto_now_add=True)
     image_name = models.ImageField(upload_to=upload_gallery_to_folder, max_length=50, verbose_name="Picture Name")
@@ -24,7 +24,6 @@ class Gallery(models.Model):
     
     def __str__(self) -> str:
         return self.place_code
-        # return f"{self.place_code} {self.shot_photo_date} {self.image_name} {self.text_info} {self.parent_code} {self.slug} {str(self.is_active)}"
 
     class Meta:
         verbose_name = "Gallery"

@@ -12,45 +12,30 @@
     <div class="home-page">
         Album
     </div>
-    <br>
     <div class="container">
-    
-
-    {% comment %} {% for imageName in album_list %}
-    <div class="picture-child-box">
-        <img src="{{media_url}}photo/gallery/{{album.place_code}}/{{imageName}}" alt="{{imageName}}">
-        {{album.image_name}}
-        <hr>
-    </div>
-    {% endfor %} {% endcomment %}
-
-
-
-    {% comment %} {% for imageName in album_list %} {% endcomment %}
         {% for x in info_photo %}
-            {% comment %} {% if  %}{% endif %} {% endcomment %}
-
-
             <div class="picture-child-box">
                 <img src="{{media_url}}{{x.image_name}}" alt="{{imageName}}">
-                {{x.text_info}}
+                <div class="detail-text-info">
+                    {{x.text_info}}
+                </div>
+                <div class="date-of-shot">
+                    <div>
+                        <span>Published Date: </span>
+                        <span class="text-success">{{x.register_date}}</span>
+                    </div>
+                    <div>
+                        <span>Photography Date: </span>
+                        <span class="text-success">{{x.shot_photo_date}}</span>
+                    </div>
+                </div>
             </div>
+            <hr>
         {% endfor %}
-
-        
-    {% comment %} {% endfor %} {% endcomment %}
-
-
-    
-    {% comment %} {% for imageName in album_list %}
-    <div class="picture-child-box">
-        <img src="{{media_url}}photo/gallery/{{album.place_code}}/{{imageName}}" alt="{{imageName}}">
-    </div>
-    {% endfor %} {% endcomment %}
-
-
-    </div>
-
-
-    
+        <div class="back-button-place">
+            <a href="{% url 'gallery:photos' %}">
+                <button class="btn btn-lg btn-success shadow-none rounded">Back</button>
+            </a>
+        </div>
+    </div>    
 {% endblock main %}
