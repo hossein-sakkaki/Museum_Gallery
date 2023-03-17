@@ -1,5 +1,4 @@
 from django.urls import path
-# from .gallery import views
 from .views import GalleryIndex, DetailAlbum
 
 app_name = 'gallery'

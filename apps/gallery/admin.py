@@ -8,8 +8,3 @@ class GalleryAdmin(admin.ModelAdmin):
     list_filter = ['place_code', 'is_active']
     search_fields = ['place_code', 'text_info']
     prepopulated_fields = {'slug': ('place_name','image_name')}
-    
-
-    
-    
-    
